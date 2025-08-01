@@ -14,9 +14,11 @@ const Navbar = () => {
       <h1 className="text-xl font-bold text-green-800">🌿 FarmCo</h1>
       <div className="space-x-6">
         <Link href="/" className={linkStyle('/')}>Home</Link>
-        <Link href="/about" className={linkStyle('/about')}>About Us</Link>
-        <Link href="/services" className={linkStyle('/services')}>Services</Link>
-        <Link href="/contact" className={linkStyle('/contact')}>Contact</Link>
+         <Link href="/product" className={linkStyle('/')}>Product</Link>
+        <Link href="/about" className={linkStyle('/')}>About Us</Link>
+        <Link href="/services" className={linkStyle('/')}>Services</Link>
+        <Link href="/contact" className={linkStyle('/')}>Contact</Link>
+       
       </div>
     </nav>
   );
