@@ -42,6 +42,7 @@ export default function HomePage() {
   }, []);
 
   return (
+    <>
     <div className="relative h-[90vh] w-full overflow-hidden">
       {slides.map((slide, index) => (
         <Image
@@ -74,6 +75,22 @@ export default function HomePage() {
         </div>
       </div>
     </div>
+    {/* Add sections below */}
+      <section id="about" className="py-20 px-4 bg-white">
+        <h2 className="text-3xl font-bold mb-4">About Us</h2>
+        <p>We are committed to providing the highest quality organic produce.</p>
+      </section>
+      <section id="services" className="py-20 px-4 bg-gray-100">
+        <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+        <p>Discover our range of farm services and organic products.</p>
+      </section>
+      <section id="contact" className="py-20 px-4 bg-white">
+        <h2 className="text-3xl font-bold mb-4">Contact</h2>
+        <p>Get in touch with us for more information.</p>
+      </section>
+
+  
+    </>
     
   );
 }
