@@ -1,10 +1,85 @@
+import Image from 'next/image';
+import { Leaf } from 'lucide-react';
+
 export default function AboutPage() {
   return (
-    <div className="py-12 px-4">
-      <h1 className="text-4xl font-bold mb-6">About Us</h1>
-      <p className="text-lg">
-        We are committed to providing the highest quality organic produce.
-      </p>
+    <div>
+
+      {/* Top Banner */}
+      <div className="relative h-[20vh] md:h-[40vh] w-full ">
+        <Image
+          src="/bgaboutus.jpg"
+          alt="About Banner"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0  bg-opacity-50 flex items-center justify-center">
+          <h1 className="text-white text-4xl md:text-6xl font-bold">About Page</h1>
+        </div>
+      </div>
+
+      {/* Middle Split Section */}
+      <section className="h-[100vh] flex flex-col md:flex-row  gap-8 px-6 md:px-16 py-16 bg-white">
+        {/* Text Left */}
+        <div className="md:w-1/2 space-y-4">
+          <h2 className="text-3xl font-bold text-green-800">Who We Are</h2>
+          <p className="text-gray-700">
+            FarmCo is a family-run agricultural business focused on producing high-quality, organic food using sustainable practices. Organic farmers grow clean crops without using toxic chemicals. They care for soil, protect water, and support biodiversity to ensure a healthy and sustainable planet for everyone.
+          </p>
+        <section className="flex flex-col justify-between md:flex-row py-4">
+            {/* Left Text */}
+            <div className="md:w-1/2 p-4 flex flex-col items-start" >
+              <div className=" space-between items-center mb-2">
+                <Leaf className="text-green-600 mr-2" size={28} />
+                <h2 className="text-xl font-semibold text-green-800">Organic Herbs and Produce for You</h2>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                We believe in cultivating not just crops, but also communities. Our farm is rooted in tradition, yet embraces innovation to meet the needs of tomorrow.Organic farmers grow clean crops without using toxic chemicals. They care for soil, protect water, and support biodiversity to ensure a healthy and sustainable planet for everyone.
+              </p>
+            </div>
+
+            {/* Right Text */}
+            <div className="md:w-1/2 p-4 flex flex-col items-start">
+              <div className="items-center mb-2">
+                <Leaf className="text-green-600 mr-2" size={28} />
+                <h2 className="text-xl font-semibold text-green-800">Organic Herbs and Produce for You</h2>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Organic growers respect nature, avoid toxins, and grow healthy crops using clean methods that protect land, people.
+              </p>
+            </div>
+          </section>
+          
+        </div>
+
+        {/* Image Right */}
+       <div className="md:w-1/2 h-full flex ">
+          <Image
+            src="/bgaboutpage.jpg"
+            alt="About the farm"
+            width={600}
+            height={400}
+            className="rounded-lg w-full h-auto object-cover"
+          />
+        </div>
+      </section>
+
+      {/* Two-Column Text Section */}
+      {/* <section className="flex flex-col md:flex-row px-6 md:px-16 py-16 bg-gray-100"> */}
+        {/* Left Text */}
+        {/* <div className="md:w-1/2 p-4 flex items-center">
+          <p className="text-gray-700 leading-relaxed">
+            We believe in cultivating not just crops, but also communities. Our farm is rooted in tradition, yet embraces innovation to meet the needs of tomorrow.
+          </p>
+        </div> */}
+
+        {/* Right Text */}
+        {/* <div className="md:w-1/2 p-4 flex items-center">
+          <p className="text-gray-700 leading-relaxed">
+            Our mission is to deliver freshness and quality you can taste — from our fields directly to your table. Sustainability, transparency, and love for nature guide all we do.
+          </p>
+        </div>
+      </section> */}
     </div>
   );
 }

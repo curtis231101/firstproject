@@ -28,16 +28,26 @@ const Navbar = () => {
     <nav className="bg-white shadow-md p-4 relative">
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
         {/* Logo */}
-        <h1 className="text-xl font-bold text-green-800">🌿 FarmCo</h1>
+        <h1 className="text-xl font-bold text-green-800">🌿 SADIAB</h1>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-6">
-          <Link href="/" className={linkStyle('/')}>Home</Link>
-          <Link href="/products" className={linkStyle('/products')}>Products</Link>
-          <Link href="/about" className={linkStyle('/about')}>About Us</Link>
-          <Link href="/services" className={linkStyle('/services')}>Services</Link>
-          <Link href="/contact" className={linkStyle('/contact')}>Contact</Link>
-        </div>
+        <div className="hidden md:flex space-x-6 items-center">
+  <Link href="/" className={linkStyle('/')}>Home</Link>
+  <Link href="/about" className={linkStyle('/about')}>About Us</Link>
+  <Link href="/products" className={linkStyle('/products')}>Products</Link>         
+  <Link href="/services" className={linkStyle('/services')}>Services</Link>
+  <Link href="/contact" className={linkStyle('/contact')}>Contact</Link>
+
+  {/* WhatsApp Button */}
+  <a
+    href="https://wa.me/2348166159501?text=Hi%20there!%20I%20would%20love%20to%20know%20more%20about%20your%20services."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-white hover:text-green-600 transition border border-green-600"
+  >
+    Let’s Talk
+  </a>
+</div>
 
         {/* Mobile Menu Button */}
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-gray-800">
