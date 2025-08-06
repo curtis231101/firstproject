@@ -6,17 +6,16 @@ export default function AboutPage() {
     <div>
 
       {/* Top Banner */}
-      <div className="relative h-[20vh] md:h-[40vh] w-full ">
-        <Image
-          src="/bgaboutus.jpg"
-          alt="About Banner"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0  bg-opacity-50 flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-6xl font-bold">About Page</h1>
-        </div>
-      </div>
+      <section
+        className="h-[250px] bg-cover bg-center flex items-center justify-center"
+        style={{
+          backgroundImage: "url('/bgaboutus.jpg')", // Replace with your actual image path
+        }}
+      >
+        <h1 className="text-4xl md:text-5xl font-bold text-white  px-6 py-3 rounded">
+          Our Services
+        </h1>
+      </section>
 
       {/* Middle Split Section */}
       <section className="h-[100vh] flex flex-col md:flex-row  gap-8 px-6 md:px-16 py-16 bg-white">

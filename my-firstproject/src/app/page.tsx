@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from 'next/link';
 import AboutPage from './about/page';
+import ServicesPage from './services/page';
+import ContactPage from './contact/page';
 
 const slides = [
   {
@@ -45,7 +47,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Slider */}
-      <div className="relative h-[90vh] w-full overflow-hidden">
+      <div className="relative h-[90vh] w-full overflow-hidden bg-black opacity-500">
         {slides.map((slide, index) => (
           <Image
             key={index}
@@ -84,13 +86,11 @@ export default function HomePage() {
       </section>
 
       <section id="services" className="py-16 px-4 md:px-8 bg-gray-100">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Our Services</h2>
-        <p className="text-gray-700 max-w-2xl">Discover our range of farm services and organic products.</p>
+       <ServicesPage />
       </section>
 
       <section id="contact" className="py-16 px-4 md:px-8 bg-white">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Contact</h2>
-        <p className="text-gray-700 max-w-2xl">Get in touch with us for more information.</p>
+        <ContactPage />
       </section>
     </>
   );

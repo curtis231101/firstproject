@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, use } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowUpRightIcon } from 'lucide-react';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -25,7 +25,7 @@ const Navbar = () => {
   const handleClose = () => setMenuOpen(false);
 
   return (
-    <nav className="bg-white shadow-md p-4 relative">
+    <nav className="bg-white shadow-md p-4 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex justify-between items-center relative">
         {/* Logo */}
         <h1 className="text-xl font-bold text-green-800">🌿 SADIAB</h1>
@@ -45,8 +45,9 @@ const Navbar = () => {
     rel="noopener noreferrer"
     className="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-white hover:text-green-600 transition border border-green-600"
   >
-    Let’s Talk
+    Let’s Talk <ArrowUpRightIcon className="inline-block ml-1" size={16}  />
   </a>
+  
 </div>
 
         {/* Mobile Menu Button */}
