@@ -21,11 +21,12 @@ export default function ContactPage() {
     <div>
       {/* Hero Section */}
       <section
+        id="contact"
         className="h-[250px] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: "url('/bgaboutus.jpg')" }}
       >
         <h1 className="text-4xl md:text-5xl font-bold text-white  px-6 py-3 rounded">
-          Contact Page
+          Contact Us
         </h1>
       </section>
 

@@ -36,13 +36,13 @@ export default function ServicesPage() {
     <div>
       {/* Hero Section */}
       <section
-        className="h-[250px] bg-cover bg-center flex items-center justify-center"
+       id='services' className="h-[250px] bg-cover bg-center flex items-center justify-center"
         style={{
           backgroundImage: "url('/bgaboutus.jpg')", // Replace with your image
         }}
       >
         <h1 className="text-4xl md:text-5xl font-bold text-white px-6 py-3 rounded">
-          Service Page
+          Services
         </h1>
       </section>
 

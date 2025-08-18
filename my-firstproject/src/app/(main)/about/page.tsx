@@ -7,18 +7,18 @@ export default function AboutPage() {
 
       {/* Top Banner */}
       <section
-        className="h-[250px] bg-cover bg-center flex items-center justify-center"
+       id='about' className= " h-[250px] bg-cover bg-center flex items-center justify-center "
         style={{
           backgroundImage: "url('/bgaboutus.jpg')", // Replace with your actual image path
         }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold text-white  px-6 py-3 rounded">
-          Our Services
+        <h1 className=" text-3xl md:text-5xl font-bold text-white  px-6 py-3 rounded">
+          About Us
         </h1>
       </section>
 
       {/* Middle Split Section */}
-      <section className="h-[100vh] flex flex-col md:flex-row  gap-8 px-6 md:px-16 py-16 bg-white">
+      <section className=" flex flex-col md:flex-row  gap-8 px-6 md:px-16 py-16 bg-white">
         {/* Text Left */}
         <div className="md:w-1/2 space-y-4">
           <h2 className="text-3xl font-bold text-green-800">Who We Are</h2>
