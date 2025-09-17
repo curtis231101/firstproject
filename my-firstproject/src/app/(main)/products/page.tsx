@@ -34,37 +34,38 @@ export default function ProductsPage() {
     setPriceKey((prev) => ({ ...prev, [name]: Date.now() }));
   };
 
-  // Payment Handler
-  const handlePayment = (product: Product, qty: number) => {
-    const totalPrice = qty * product.basePrice;
+// Payment Handler
+const handlePayment = (product: Product, qty: number) => {
+  const totalPrice = qty * product.basePrice;
 
-    // @ts-ignore
-    FlutterwaveCheckout({
-      public_key: process.env.NEXT_PUBLIC_FLW_PUBLIC_KEY, // replace with your public key
-      tx_ref: Date.now().toString(),
-      amount: totalPrice,
-      currency: "NGN",
-      payment_options: "card, banktransfer, ussd",
-      customer: {
-        email: "customer@example.com",
-        phone_number: "08123456789",
-        name: "John Doe",
-      },
-      customizations: {
-        title: "SADIAB AGRO Store",
-        description: `Payment for ${qty} ${product.unit} of ${product.name}`,
-        logo: "/logo.png", // optional store logo
-      },
-      callback: function (data: any) {
-        console.log("Payment callback:", data);
-        if (data.status === "successful") {
-          alert("Payment Successful!");
-        } else {
-          alert("Payment Failed or Cancelled");
-        }
-      },
-    });
-  };
+  // @ts-expect-error: FlutterwaveCheckout is loaded from external script
+  FlutterwaveCheckout({
+    public_key: process.env.NEXT_PUBLIC_FLW_PUBLIC_KEY, // replace with your public key
+    tx_ref: Date.now().toString(),
+    amount: totalPrice,
+    currency: "NGN",
+    payment_options: "card, banktransfer, ussd",
+    customer: {
+      email: "customer@example.com",
+      phone_number: "08123456789",
+      name: "John Doe",
+    },
+    customizations: {
+      title: "SADIAB AGRO Store",
+      description: `Payment for ${qty} ${product.unit} of ${product.name}`,
+      logo: "/logo.png",
+    },
+    callback: function (data: any) {
+      console.log("Payment callback:", data);
+      if (data.status === "successful") {
+        alert("Payment Successful!");
+      } else {
+        alert("Payment Failed or Cancelled");
+      }
+    },
+  });
+};
+
 
   return (
     <div>
