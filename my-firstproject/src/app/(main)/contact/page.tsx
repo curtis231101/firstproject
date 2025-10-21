@@ -129,7 +129,7 @@ export default function ContactPage() {
 
       {/* Floating WhatsApp Button */}
       <a
-        href="https://wa.me/2348166159501"
+        href="https://wa.link/vkq88s"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition duration-300 z-50"

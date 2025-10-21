@@ -75,7 +75,7 @@ export default function ServicesPage() {
       {/* WhatsApp CTA */}
       <div className="text-center mb-16">
         <Link
-          href="https://wa.me/2348166159501"
+          href="https://wa.link/vkq88s"
           target="_blank"
           className="inline-block bg-green-600 text-white px-6 py-3 rounded-full shadow hover:bg-green-700 transition duration-300"
         >

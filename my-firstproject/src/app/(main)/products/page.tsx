@@ -152,7 +152,7 @@ export default function ProductsPage() {
         <p className="text-lg">
           If product is needed in bulk{" "}
           <Link
-            href="https://wa.me/2348166159501?text=Hello%20I%20want%20to%20order%20in%20bulk"
+            href="https://wa.link/vkq88s?text=Hello%20I%20want%20to%20order%20in%20bulk"
             target="_blank"
             className="text-green-600 font-semibold underline"
           >
