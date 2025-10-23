@@ -38,7 +38,7 @@ export default function ProductsPage() {
   const handlePayment = (product: Product, qty: number) => {
     const totalPrice = qty * product.basePrice;
 
-    // @ts-ignore
+    // @ts-expect-error - FlutterwaveCheckout is loaded from external script at runtime
     FlutterwaveCheckout({
       public_key: process.env.NEXT_PUBLIC_FLW_PUBLIC_KEY, // replace with your public key
       tx_ref: Date.now().toString(),
@@ -55,9 +55,10 @@ export default function ProductsPage() {
         description: `Payment for ${qty} ${product.unit} of ${product.name}`,
         logo: "/logo.png", // optional store logo
       },
-      callback: function (data: any) {
-        console.log("Payment callback:", data);
-        if (data.status === "successful") {
+    callback: function (data: unknown) {
+        const d = data as { status?: string; [key: string]: unknown };
+        console.log("Payment callback:", d);
+        if (d.status === "successful") {
           alert("Payment Successful!");
         } else {
           alert("Payment Failed or Cancelled");
